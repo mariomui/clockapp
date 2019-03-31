@@ -25,7 +25,8 @@ export class ClockView extends Component {
     }
   }
   componentDidMount() {
-    const { hoursDeg, secondsDeg, minutesDeg } = this.props
+    const { hoursDeg, secondsDeg, minutesDeg, updatePm } = this.props
+    updatePm();
     if (this.state.hasInitialized === false) {
       this.setState({
         hoursDeg: hoursDeg + getCorrectInitialHour(),
@@ -59,7 +60,7 @@ export class ClockView extends Component {
 
   render() {
     const { secondsDeg, hoursDeg, minutesDeg } = this.state
-    const { Clock } = this.props
+    const { Clock, handleAlarmInfo } = this.props
     return (
       <div className={clockViewCss.clockBlock}>
         <ClockFace
@@ -67,6 +68,7 @@ export class ClockView extends Component {
           hoursDeg={hoursDeg}
           minutesDeg={minutesDeg}
           Clock={Clock}
+          handleAlarmInfo={handleAlarmInfo}
         />
       </div>
     )

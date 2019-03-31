@@ -38,6 +38,10 @@ class ClockControl {
     return this[hoursMinutesOrSeconds]
   }
 
+  setPm = () => {
+    this.isPM = this.date.getHours() > 12 ? true : false
+  }
+
   getPm = () => {
     return this.isPM
   }

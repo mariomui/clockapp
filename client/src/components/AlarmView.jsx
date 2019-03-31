@@ -37,6 +37,7 @@ export class AlarmView extends Component {
     })
   }
   render() {
+    let {presentDate} = this.props
     let { alarmHour, alarmMinute, alarmSecond, isAlarmOn } = this.state
     return (
       <div className={AlarmViewCss.container}>
@@ -99,7 +100,7 @@ export class AlarmView extends Component {
           </form >
 
           <div className={AlarmViewCss.flexColTwo}>
-            <DatePicker />
+            <DatePicker presentDate={presentDate} />
           </div>
         </div>
       </div >

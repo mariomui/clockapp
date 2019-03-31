@@ -12,11 +12,12 @@ export class DateView extends Component {
     }
   }
   componentDidMount() {
-    const { Clock } = this.props
+    const { Clock, handleAlarmInfo } = this.props
 
     if (!this.state.hasBeenInitialized) {
       var dateObject = Clock.initializeControlDate();
       Clock.setDate(dateObject);
+      handleAlarmInfo(dateObject)
       Object.assign(dateObject, { hasBeenInitialized: true })
       this.setState(dateObject)
     }

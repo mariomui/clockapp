@@ -26,7 +26,8 @@ class App extends Component {
       alarmHour: null,
       alarmMinute: null,
       alarmSecond: null,
-      isAlarmOn: false
+      isAlarmOn: false,
+      month: ''
     }
   }
 
@@ -40,9 +41,19 @@ class App extends Component {
     this.setState(timeObject)
   }
 
+  updatePm = () => {
+    Clock.setPm()
+    this.setState({
+      isPm: Clock.getPm()
+    })
+  }
 
   render() {
-    const { hours, minutes, seconds, isPm, alarmHour, alarmMinute, alarmSecond, isAlarmOn } = this.state
+    const { hours, minutes, seconds, isPm,
+      alarmHour, alarmMinute, alarmSecond, isAlarmOn } = this.state
+
+    const { month, dayNum, year, dayWeek } = this.state
+    const presentDate = { month, dayNum: Number(dayNum), year: Number(year), dayWeek }
     return (
       <Layout>
         <div />
@@ -52,6 +63,8 @@ class App extends Component {
           minutesDeg={Clock.convertMinutesToDegrees(minutes)}
           handlePostRenderInfo={this.handlePostRenderInfo}
           Clock={Clock}
+          handleAlarmInfo={this.handleAlarmInfo}
+          updatePm={this.updatePm}
         />
         <div />
 
@@ -69,6 +82,7 @@ class App extends Component {
         <AlarmView
           Clock={Clock}
           handleAlarmInfo={this.handleAlarmInfo}
+          presentDate={presentDate}
         />
 
       </Layout>

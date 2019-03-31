@@ -13,7 +13,7 @@ function makeClockNums(a, b) {
 }
 
 export default (props) => {
-  const { hoursDeg, minutesDeg, secondsDeg, Clock } = props
+  const { hoursDeg, minutesDeg, secondsDeg, handleAlarmInfo, Clock } = props
   const clockNums = makeClockNums(1, 12);
   return (
     <div
@@ -27,7 +27,7 @@ export default (props) => {
           <Nums clockNum={clockNum} key={`${clockNum}, ${index} `} />
         )
       })}
-      <DateView Clock={Clock} />
+      <DateView Clock={Clock} handleAlarmInfo={handleAlarmInfo} />
     </div >
   )
 }
