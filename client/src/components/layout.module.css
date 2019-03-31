@@ -1,0 +1,55 @@
+.banner {
+  background-color: blue;
+  max-width: 200px;
+  min-width: 200px;
+  font-size: 50px;
+  color: white;
+  margin: -9px 0px 0px -9px
+}
+
+.container {
+  font: black;
+  width: 100%;
+}
+
+.rows {
+  display: grid;
+  grid-auto-rows: 100%;
+  grid-template-columns: 3fr 80% 3fr
+}
+
+.verticalRow {
+  display: flex;
+  flex-direction: row
+}
+
+.flexColOne {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 20%;
+}
+.flexColTwo {
+  flex: 1;
+  width: 33%;
+}
+
+.button {
+  outline: none
+}
+.button:active{
+  transform: translateY(1px);
+  filter: saturate(150%);
+}
+
+.button:focus{
+  background-color: darkgoldenrod;
+  box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.37);
+}
+.button:hover {
+  cursor: pointer
+}
+.button {
+  background-color: blueviolet;
+  color: white
+}

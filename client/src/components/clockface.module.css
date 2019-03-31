@@ -1,0 +1,11 @@
+.face {
+  display: inline-block;
+  border: 1px solid black;
+  margin: auto;
+  border-radius: 50% 50%;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  transform: rotate(-90deg)
+}
+
