@@ -59,7 +59,7 @@ export class DatePicker extends Component {
         </label>
         <label htmlFor="subm">
           {!isDateAlarmSet
-            ? <input type="submit" value="Set Alarm for Date" />
+            ? <input className={datePickerCss.button} type="submit" value="Set Alarm for Date" />
             : <input type="submit" value="Remove Alarm for Date" />
           }
         </label>
