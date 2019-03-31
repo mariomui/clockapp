@@ -41,7 +41,7 @@ export class DatePicker extends Component {
   }
   render() {
     const { alarmMonth, alarmDayNum, alarmYear, isDateAlarmSet } = this.state
-    const { dayWeek, month, dayNum, year, } = this.props.presentDate
+    const { month, dayNum, year, } = this.props.presentDate
 
     if (isDateAlarmSet) {
       if ((month === alarmMonth)) {

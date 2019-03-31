@@ -11,7 +11,6 @@ export default ({ children }) => {
   return (
     <div className={layoutCss.container}>
       <Banner />
-      <div style={{ height: '100px' }} />
       <div className={layoutCss.rows}>
         {children}
       </div>
