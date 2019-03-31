@@ -3,7 +3,7 @@ Part 1:
 [x] round analog clock with dynamically moving hour/minute/second hands that point to actual clock numbers (basically a real-looking analog clock) which tells real time and AM/PM indicator. 
 
 [x] Part 2: Add controls near the clock to allow a user to set an alarm that triggers some alert based on when the user enters the hour/minute/second of when the alarm should go off, and a way to turn the alarm on and off. 
-[] Bonus points: Add a date indicator on the clock somewhere and incorporate setting date into the alarm also.
+[ ] Bonus points: Add a date indicator on the clock somewhere and incorporate setting date into the alarm also.
 
 Please submit what you are able to finish by Monday morning.
 ...it's ok if you don't finish, just send in what you do get to in that case.

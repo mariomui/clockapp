@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import AlarmViewCss from './layout.module.css'
+import { DatePicker } from './DatePicker'
 
 export class AlarmView extends Component {
   constructor(props) {
@@ -98,7 +99,7 @@ export class AlarmView extends Component {
           </form >
 
           <div className={AlarmViewCss.flexColTwo}>
-            placeholder
+            <DatePicker />
           </div>
         </div>
       </div >

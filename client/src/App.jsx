@@ -70,6 +70,7 @@ class App extends Component {
           Clock={Clock}
           handleAlarmInfo={this.handleAlarmInfo}
         />
+
       </Layout>
     );
   }
