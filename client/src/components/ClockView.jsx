@@ -59,13 +59,14 @@ export class ClockView extends Component {
 
   render() {
     const { secondsDeg, hoursDeg, minutesDeg } = this.state
-
+    const { Clock } = this.props
     return (
       <div className={clockViewCss.clockBlock}>
         <ClockFace
           secondsDeg={secondsDeg}
           hoursDeg={hoursDeg}
           minutesDeg={minutesDeg}
+          Clock={Clock}
         />
       </div>
     )

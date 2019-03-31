@@ -51,6 +51,7 @@ class App extends Component {
           secondsDeg={Clock.convertSecondsToDegrees(seconds)}
           minutesDeg={Clock.convertMinutesToDegrees(minutes)}
           handlePostRenderInfo={this.handlePostRenderInfo}
+          Clock={Clock}
         />
         <div />
 

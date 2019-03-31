@@ -2,6 +2,7 @@ import React from 'react'
 const clockFaceCss = require('./clockface.module.css')
 import Hand from './Hand'
 import Nums from './Nums'
+import { DateView } from './DateView'
 
 function makeClockNums(a, b) {
   var arr = []
@@ -12,7 +13,7 @@ function makeClockNums(a, b) {
 }
 
 export default (props) => {
-  const { hoursDeg, minutesDeg, secondsDeg } = props
+  const { hoursDeg, minutesDeg, secondsDeg, Clock } = props
   const clockNums = makeClockNums(1, 12);
   return (
     <div
@@ -26,6 +27,7 @@ export default (props) => {
           <Nums clockNum={clockNum} key={`${clockNum}, ${index} `} />
         )
       })}
+      <DateView Clock={Clock} />
     </div >
   )
 }
