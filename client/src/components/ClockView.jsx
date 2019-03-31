@@ -60,7 +60,7 @@ export class ClockView extends Component {
 
   render() {
     const { secondsDeg, hoursDeg, minutesDeg } = this.state
-    const { Clock, handleAlarmInfo } = this.props
+    const { Clock, handleAlarmInfo, timeViewPropPackage } = this.props
     return (
       <div className={clockViewCss.clockBlock}>
         <ClockFace
@@ -69,6 +69,7 @@ export class ClockView extends Component {
           minutesDeg={minutesDeg}
           Clock={Clock}
           handleAlarmInfo={handleAlarmInfo}
+          timeViewPropPackage={timeViewPropPackage}
         />
       </div>
     )

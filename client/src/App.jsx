@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Layout from './components/Layout'
 import { ClockView } from './components/ClockView'
 const { ClockControl } = require('./controller/')
-import TimeView from './TimeView'
+import TimeView from './components/TimeView'
 import { AlarmView } from './components/AlarmView'
 
 require('./global.css')
@@ -52,6 +52,11 @@ class App extends Component {
     const { hours, minutes, seconds, isPm,
       alarmHour, alarmMinute, alarmSecond, isAlarmOn } = this.state
 
+    const timeViewPropPackage = {
+      hours, minutes, seconds, isPm,
+      alarmHour, alarmMinute, alarmSecond, isAlarmOn
+    }
+
     const { month, dayNum, year, dayWeek } = this.state
     const presentDate = { month, dayNum: Number(dayNum), year: Number(year), dayWeek }
     return (
@@ -65,10 +70,11 @@ class App extends Component {
           Clock={Clock}
           handleAlarmInfo={this.handleAlarmInfo}
           updatePm={this.updatePm}
+          timeViewPropPackage={timeViewPropPackage}
         />
         <div />
 
-        <TimeView
+        {/* <TimeView
           hours={hours}
           minutes={minutes}
           seconds={
@@ -78,7 +84,10 @@ class App extends Component {
           }
           isPm={isPm}
           alarms={{ alarmHour, alarmMinute, alarmSecond, isAlarmOn }}
-        />
+        /> */}
+        <div>
+
+        </div>
         <AlarmView
           Clock={Clock}
           handleAlarmInfo={this.handleAlarmInfo}
