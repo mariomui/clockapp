@@ -15,7 +15,7 @@ export default (props) => {
   return (
     <div>
       {hours}:
-      {minutes}:
+      {(minutes < 10) ? `0${minutes}` : minutes}:
       {seconds}
       {isPm ? <span> PM</span> : <span>AM</span>}
 
