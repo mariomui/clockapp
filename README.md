@@ -36,7 +36,9 @@ initialClockSize: 50px
 hourDeg, minuteDeg, secondDeg = 0
 isPM = 0;
 ### functions
-reportToAppAndRender (any information that needs to be reported back to App will be used in this function)
+* handlePostRenderInfo (any information that needs to be reported back to App will be used in this function)
+* handleAlarmInfo
+* handleDateAlarmInfo
 ie, sending the Clock has to send the current state back to App.
 
 ##ClockView
